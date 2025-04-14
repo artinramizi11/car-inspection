@@ -1,0 +1,28 @@
+<h1 class="page-title">All Clients</h1>
+<div class="client-list">
+    @for (client of allClients; track client.id){
+        <div class="client-card">
+            <div class="client-info">
+                <h2 class="client-name">{{client.name}} {{client.surname}}</h2>
+                <p class="client-phone"> {{client.phone_number}}</p>
+            </div>
+            
+            <div class="cars-section">
+                <h3 class="cars-heading">Vehicles</h3>
+                <div class="cars-container">
+                    @for (car of client.cars; track car.id) {
+                        <div class="car-item" [class.status-active]="car.status === 'active'" 
+                                             [class.status-inactive]="car.status !== 'active'">
+                            <p class="car-make-model">{{car.make}} {{car.model}}</p>
+                            <div class="car-details">
+                                <span class="damage-count">{{car.damages.length}} damages</span>
+                                <span *ngIf="car.status === 'Repaired'" class="car-repaired">Repaired</span>
+                                <span *ngIf="car.status !== 'Repaired'" class="car-not-repaired">Not repaired </span>
+                            </div>
+                        </div>
+                    }
+                </div>  
+            </div>
+        </div>
+    }
+</div>

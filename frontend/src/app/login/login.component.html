@@ -1,0 +1,21 @@
+<div class="login-container">
+    <div *ngIf="loginAsClient">
+        <h1 class="loginAsClient">Login As Client</h1>
+        <form [formGroup]="clientForm" (ngSubmit)="loginClient()">
+            <input type="text" placeholder="Name" formControlName="name">
+            <input type="text" placeholder="Surname" formControlName="surname">
+            <input type="submit" value="Login">
+        </form>
+        <p (click)="showUserLogin()">Login as user</p>
+    </div>
+
+    <div *ngIf="loginAsUser">
+        <h1 class="loginAsUser">Login As User</h1>
+        <form [formGroup]="userForm" (ngSubmit)="loginUser()">
+            <input type="email" placeholder="Email" formControlName="email">
+            <input type="password" placeholder="Password" formControlName="password">
+            <input type="submit" value="Login">
+        </form>
+        <p (click)="showClientLogin()">Login as client</p>
+    </div>
+</div>

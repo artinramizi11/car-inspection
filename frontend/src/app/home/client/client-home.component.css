@@ -1,0 +1,63 @@
+.page-title {
+  text-align: center;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .car-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+  }
+  
+
+  
+  .car-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #546c8b, #3a516e);
+    color: white;
+  }
+  
+  .car-make-model {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .car-year {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+  
+  .car-details {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .detail-value {
+    font-family: 'Roboto Mono', monospace;
+    color: #4b5563;
+    background: #f8fafc;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+  

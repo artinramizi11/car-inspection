@@ -1,0 +1,40 @@
+    
+    <div class="container">
+        <div class="description">
+          
+            
+            <h1>Car Make: {{car?.make}}</h1>
+            <h1 class="car-status" >
+              Status: {{ car?.status }}
+            </h1>
+            
+            <button *ngIf="car?.status !== 'Repaired'" (click)="markAsRepaired(car.id)">
+              Mark as repaired
+            </button>
+          </div>
+         
+
+      
+          <div class="top-side" style="display: flex;align-items: center;">
+           <div class="responsiveImage" style="width: 25%;" > 
+            <draw-image [image]="getImageBySide('front')"></draw-image>
+           </div>
+           <div class="responsiveImage" style="width: 25%;" >
+            <draw-image [image]="getImageBySide('back')"></draw-image>
+           </div>
+           <div class="responsiveImage" style="width: 50%;" >
+            <draw-image  [image]="getImageBySide('top')"></draw-image>
+           </div>
+          </div>
+
+          <div class="bottom-side" style="display: flex;align-items: center;">
+            <div class="responsiveImage" style="width: 50%;">
+              <draw-image  [image]="getImageBySide('left')"></draw-image>
+            </div>
+            <div class="responsiveImage" style="width: 50%;">
+              <draw-image  [image]="getImageBySide('right')"></draw-image>
+            </div>
+          </div>
+          
+    </div>  
+    

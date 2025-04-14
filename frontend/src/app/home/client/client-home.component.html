@@ -1,0 +1,28 @@
+<h1 class="page-title">Your Registered Cars</h1>
+
+<div class="car-grid">
+
+    @for (car of clientCars; track car.id) {
+        <div class="car-card">
+            <div class="car-header">
+                <h2 class="car-make-model">{{ car.make }} {{ car.model }}</h2>
+                <span class="car-year">Car Year: {{ car.year }}</span>
+            </div>
+            <div class="car-details">
+                <p class="car-vin">
+                    <span class="detail-label">VIN:</span> 
+                    <span class="detail-value">{{ car.vehicle_personal_number }}</span>
+                </p>
+                <div class="status-badge">
+                    <p>Status: {{ car.status }}</p>
+                    <p>Damages: {{ car.damages.length }}</p>
+                    <button (click)="router.navigate(['/car-detail', car.id])">View Details</button>
+                </div>
+            </div>  
+        </div>
+    }   
+</div>
+
+<div *ngIf="clientCars.length === 0" class="empty-state">
+    <h1>You don't have any registered cars</h1>
+</div>

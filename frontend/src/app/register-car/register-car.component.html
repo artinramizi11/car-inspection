@@ -1,0 +1,27 @@
+<div class="form-container">
+    <h1 class="form-title">Register Your Car</h1>
+
+    <form [formGroup]="registerCarForm" (ngSubmit)="createCar()" class="car-form">
+        <div class="form-group">
+            <input type="text" placeholder=" " formControlName="make" class="form-input">
+            <label class="form-label">Make</label>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" placeholder=" " formControlName="model" class="form-input">
+            <label class="form-label">Model</label>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" placeholder=" " formControlName="year" class="form-input">
+            <label class="form-label">Year</label>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" placeholder=" " formControlName="vehicle_personal_number" class="form-input">
+            <label class="form-label">Vehicle Number</label>
+        </div>
+        
+        <button type="submit" class="submit-btn">Register Vehicle</button>
+    </form>
+</div>

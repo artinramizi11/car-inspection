@@ -1,0 +1,58 @@
+.login-container {
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+    max-width: 400px;
+    
+  }
+  
+  .loginAsClient, .loginAsUser {
+    color: #546c8b;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+  }
+  
+
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+  
+
+  
+  input[type="submit"] {
+    background-color: #546c8b;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+  }
+  
+
+  
+  p {
+    color: #64748b;
+    cursor: pointer;
+  }
+  
+  p:hover {
+    text-decoration: underline;
+  }
+  
+  

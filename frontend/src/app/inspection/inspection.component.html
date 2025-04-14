@@ -1,0 +1,13 @@
+<div class="test">
+  <p class="error" *ngIf="error">{{ error }}</p>
+
+  <div class="container">
+    <div *ngFor="let car of cars; track trackCar">
+      <div class="car-card">
+        <p class="car-name">{{ car.client.name }}</p>
+        <p class="car-make">{{ car.make }}</p>
+        <button (click)="visitCar(car.id)" class="visit-button">Go to this car</button>
+      </div>
+    </div>
+  </div>
+</div>

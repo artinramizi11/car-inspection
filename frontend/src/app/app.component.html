@@ -1,0 +1,14 @@
+<nav class="navbar">
+    <div class="navbar-brand">🚗 Car Inspection Application</div>
+    <div class="navbar-links">
+      <a *ngIf="isLogged" routerLink="/">Home</a>
+      <a *ngIf="isLogged"  routerLink="/inspections">Inspections</a>
+      <a *ngIf="isLogged && role === 'client'" routerLink="/register-car">Register New Car</a>
+      <a *ngIf="isLogged" (click)="logout()">Logout</a>
+        <a *ngIf="!isLogged" routerLink="/login">Login</a>
+
+    </div>
+  </nav>
+  
+  
+<router-outlet></router-outlet>

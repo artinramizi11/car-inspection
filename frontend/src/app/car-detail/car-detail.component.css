@@ -1,0 +1,102 @@
+.car-detail-container {
+    padding: 2rem;
+  }
+  
+  
+  .error-message {
+    text-align: center;
+    color: #546c8b;
+    padding: 2rem;
+  }
+  
+  .error-message button {
+    margin-top: 1rem;
+    background: #546c8b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .car-title {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+  }
+  
+  .car-info {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .basic-info {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .damage-info {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .total-damages {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .damage-sides {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .damage-side {
+    text-align: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+  }
+  
+  .damage-count {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .damage-label {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+
+  .damages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .canvas-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    padding: 10px;
+    position: relative;
+  }
+
+  .canvasStyle{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+

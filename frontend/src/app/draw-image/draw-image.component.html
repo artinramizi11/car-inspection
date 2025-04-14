@@ -1,0 +1,36 @@
+<div #wrapper class="canvas-wrapper">
+    <img #backgroundImg [src]="image.src" (load)="onImageLoad()"  alt="Image"/>
+    <canvas #drawingCanvas class="canvasStyle" (click)="onCanvasClick($event)"></canvas>
+  </div>
+
+  <form *ngIf="addingDamage" class="damage-form" [formGroup]="damageForm" (ngSubmit)="submitDamage()">
+    <div class="form-group">
+      <label for="damageDescription" class="form-label">Describe the damage</label>
+      <input type="text" id="damageDescription" class="form-control" placeholder="Write the damage" formControlName="description" />
+    </div>
+  
+    <div class="form-group">
+      <label class="form-label">Damage Type</label>
+      <div class="damage-options">
+        <div class="form-check">
+          <input type="radio" id="scratch" name="type" value="scratch"  class="form-check-input"  formControlName="type" />
+          <label for="scratch" class="form-check-label">Scratch</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="dent" name="type" value="dent"  class="form-check-input" formControlName="type" />
+          <label for="dent" class="form-check-label">Dent</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="crack" name="type" value="crack"  class="form-check-input" formControlName="type" />
+          <label for="crack" class="form-check-label">Crack</label>
+        </div>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary btn-block">Add Damage</button>
+    <p class="close-text" (click)="closeModule()">Close</p>
+  </form>
+  
+
+
+

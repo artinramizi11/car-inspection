@@ -1,0 +1,25 @@
+.car-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1a1a1a;
+    background-color: #f5f7fa;
+  }
+  
+ 
+  
+  .empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    margin-top: 2rem;
+    border: 1px dashed #e2e8f0;
+  }
+  
+  .empty-state h1 {
+    color: #64748b;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }

@@ -1,0 +1,54 @@
+<div class="car-detail-container">
+  
+  
+    <p *ngIf="loading">Loading...</p>
+      <div class="error-message" *ngIf="error">
+        <h2>{{ error }}</h2>
+        <button (click)="router.navigate(['/'])">Back to Home</button>
+      </div>
+    
+  
+      <div *ngIf="car.id">
+        <h1 class="car-title">Details about {{car.make}} {{car.model}}</h1>
+      
+      <div class="car-info">
+        <div class="basic-info">
+          <h2>Basic Information</h2>
+          <p><strong>Make:</strong> {{car.make}}</p>
+          <p><strong>Model:</strong> {{car.model}}</p>
+          <p><strong>Year:</strong> {{car.year}}</p>
+        </div>
+  
+        <div class="damage-info">
+          <h2>Damage Report</h2>
+          <p class="total-damages">Total Damages: {{car.damages.length || 0}}</p>
+          
+          <div class="damage-sides">
+            <div class="damage-side">
+              <span class="damage-count">{{countSideDamages("front")}}</span>
+              <span class="damage-label">Front</span>
+            </div>
+            <div class="damage-side">
+              <span class="damage-count">{{countSideDamages("back")}}</span>
+              <span class="damage-label">Back</span>
+            </div>
+            <div class="damage-side">
+              <span class="damage-count">{{countSideDamages("left")}}</span>
+              <span class="damage-label">Left</span>
+            </div>
+            <div class="damage-side">
+              <span class="damage-count">{{countSideDamages("right")}}</span>
+              <span class="damage-label">Right</span>
+            </div>
+            <div class="damage-side">
+              <span class="damage-count">{{countSideDamages("top")}}</span>
+              <span class="damage-label">Top</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      </div>
+    
+  </div>
